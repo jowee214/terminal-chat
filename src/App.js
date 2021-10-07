@@ -2,7 +2,7 @@ import "./App.css";
 import { auth } from "./firebase.js";
 import { useAuthState } from "react-firebase-hooks/auth";
 import firebase from "firebase/compat/app";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { database } from "./firebase";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 
@@ -16,10 +16,10 @@ function App() {
 }
 
 function Chat() {
-  // const dummy = useRef();
+  const dummy = useRef();
 
   const messagesRef = database.collection("messages");
-  const query = messagesRef.orderBy("createdAt").limit(50);
+  const query = messagesRef.orderBy("createdAt").limit(75);
   const [messages] = useCollectionData(query, { idField: "id" });
 
   const [formValue, setFormValue] = useState("");
@@ -34,23 +34,26 @@ function Chat() {
       displayName,
       uid,
     });
-
-    setFormValue("");
-
     // dummy.current.scrollIntoView({ behavior: "smooth" });
+    setFormValue("");
   };
 
   return (
     <div className="App crt">
-      {messages &&
-        messages.map((msg) => <ChatMessage key={msg.id} message={msg} />)}
+      <div className="ChatBox">
+        {messages &&
+          messages.map((msg) => <ChatMessage key={msg.id} message={msg} />)}
+        <div ref={dummy}></div>
+      </div>
       <footer>
         <label>{auth.currentUser.displayName}@terminal-chat &gt;</label>
         <form onSubmit={sendMessage}>
           <input
             className="crt"
+            id="TextBox"
             value={formValue}
             onChange={(e) => setFormValue(e.target.value)}
+            autofocus="true"
           ></input>
         </form>
         <button className="crt" onClick={() => auth.signOut()}>
@@ -67,7 +70,7 @@ function ChatMessage(props) {
   return (
     <div className={`message ${messageClass}`}>
       <p>
-        {displayName[0].toLowerCase()}: {text}
+        {displayName.split(" ")[0].toLowerCase()}: {text}
       </p>
     </div>
   );

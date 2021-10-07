@@ -1,11 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
+* {
+  background-attachment: fixed;
+}
+
 body {
   background-color: black;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.header,
+.footer {
+  overflow: hidden;
+  position: fixed;
+}
+
+.ChatBox {
+  top: 0;
+  overflow: auto;
+  height: 97vh;
 }
 
 .message {
   margin-top: -25px;
+  margin-left: 10px;
 }
 
 p,
@@ -30,15 +49,19 @@ select:focus {
 }
 
 footer {
-  position: absolute;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 78%, rgba(0, 0, 0, 0) 100%);
+  position: -webkit-sticky;
+  position: sticky;
   bottom: 0;
   left: 0;
-  margin: 10px;
+  padding: 10px;
   width: 99%;
 }
 
 form {
-  position: absolute;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
   display: inline-block;
 }
 
@@ -69,6 +92,25 @@ button:hover {
   margin-top: 10px;
   width: 160px;
   filter: drop-shadow(0 0 0.25rem rgba(0, 0, 0, 0.2));
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 128, 0, 0.25);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 128, 0, 0.2);
 }
 
 @keyframes flicker {
@@ -275,5 +317,5 @@ button:hover {
 }
 
 .crt {
-  animation: textShadow 1.6s infinite;
+  animation: textShadow 2.5s infinite;
 }
