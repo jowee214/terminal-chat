@@ -16,7 +16,6 @@ function App() {
     <div className="App">
       <header>
         <Helmet>
-          <meta charSet="utf-8" />
           <title>terminal chat</title>
           <title>{username}@terminal-chat</title>
           <link
@@ -32,6 +31,35 @@ function App() {
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"
+          />
+
+          <meta name="description" content="Terminal style chat room" />
+
+          <meta itemprop="name" content="terminal chat" />
+          <meta itemprop="description" content="Terminal style chat room" />
+          <meta
+            itemprop="image"
+            content="https://raw.githubusercontent.com/val8119/terminal-chat/master/etc/thumb.png"
+          />
+
+          <meta
+            property="og:url"
+            content="https://val8119.github.io/terminal-chat"
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="terminal chat" />
+          <meta property="og:description" content="Terminal style chat room" />
+          <meta
+            property="og:image"
+            content="https://raw.githubusercontent.com/val8119/terminal-chat/master/etc/thumb.png"
+          />
+
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="terminal chat" />
+          <meta name="twitter:description" content="Terminal style chat room" />
+          <meta
+            name="twitter:image"
+            content="https://raw.githubusercontent.com/val8119/terminal-chat/master/etc/thumb.png"
           />
         </Helmet>
       </header>
