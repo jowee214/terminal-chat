@@ -67,7 +67,7 @@ function ChatMessage(props) {
   return (
     <div className={`message ${messageClass}`}>
       <p>
-        {displayName}: {text}
+        {displayName[0].toLowerCase()}: {text}
       </p>
     </div>
   );
