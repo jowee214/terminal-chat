@@ -5,11 +5,22 @@ import firebase from "firebase/compat/app";
 import React, { useState, useRef } from "react";
 import { database } from "./firebase";
 import { useCollectionData } from "react-firebase-hooks/firestore";
+import { Helmet } from "react-helmet";
 
 function App() {
   const [user] = useAuthState(auth);
+  let username = user
+    ? auth.currentUser.displayName.split(" ")[0].toLowerCase()
+    : "unknown";
   return (
     <div className="App">
+      <header>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>{username}@terminal-chat</title>
+          <link rel="canonical" href="http://mysite.com/example" />
+        </Helmet>
+      </header>
       <div>{user ? <Chat /> : <SignIn />}</div>
     </div>
   );
@@ -46,7 +57,10 @@ function Chat() {
         <div ref={dummy}></div>
       </div>
       <footer>
-        <label>{auth.currentUser.displayName}@terminal-chat &gt;</label>
+        <label>
+          {auth.currentUser.displayName.split(" ")[0].toLowerCase()}
+          @terminal-chat &gt;
+        </label>
         <form onSubmit={sendMessage}>
           <input
             className="crt"
