@@ -17,8 +17,22 @@ function App() {
       <header>
         <Helmet>
           <meta charSet="utf-8" />
+          <title>terminal chat</title>
           <title>{username}@terminal-chat</title>
-          <link rel="canonical" href="http://mysite.com/example" />
+          <link
+            rel="canonical"
+            href="https://val8119.github.io/terminal-chat/"
+          />
+          <meta name="description" content="Terminal style chat room" />
+          <meta
+            name="keywords"
+            content="React, Firebase, Chatroom, Chat, Terminal"
+          />
+          <meta name="author" content="val8119" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
         </Helmet>
       </header>
       <div>{user ? <Chat /> : <SignIn />}</div>
