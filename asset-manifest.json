@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/terminal-chat/static/css/main.d4dc012c.chunk.css",
-    "main.js": "/terminal-chat/static/js/main.8d27319a.chunk.js",
-    "main.js.map": "/terminal-chat/static/js/main.8d27319a.chunk.js.map",
+    "main.css": "/terminal-chat/static/css/main.3e9fd321.chunk.css",
+    "main.js": "/terminal-chat/static/js/main.7b609d07.chunk.js",
+    "main.js.map": "/terminal-chat/static/js/main.7b609d07.chunk.js.map",
     "runtime-main.js": "/terminal-chat/static/js/runtime-main.54b418ff.js",
     "runtime-main.js.map": "/terminal-chat/static/js/runtime-main.54b418ff.js.map",
-    "static/js/2.abc40071.chunk.js": "/terminal-chat/static/js/2.abc40071.chunk.js",
-    "static/js/2.abc40071.chunk.js.map": "/terminal-chat/static/js/2.abc40071.chunk.js.map",
+    "static/js/2.0eb4fe94.chunk.js": "/terminal-chat/static/js/2.0eb4fe94.chunk.js",
+    "static/js/2.0eb4fe94.chunk.js.map": "/terminal-chat/static/js/2.0eb4fe94.chunk.js.map",
     "index.html": "/terminal-chat/index.html",
-    "static/css/main.d4dc012c.chunk.css.map": "/terminal-chat/static/css/main.d4dc012c.chunk.css.map",
-    "static/js/2.abc40071.chunk.js.LICENSE.txt": "/terminal-chat/static/js/2.abc40071.chunk.js.LICENSE.txt"
+    "static/css/main.3e9fd321.chunk.css.map": "/terminal-chat/static/css/main.3e9fd321.chunk.css.map",
+    "static/js/2.0eb4fe94.chunk.js.LICENSE.txt": "/terminal-chat/static/js/2.0eb4fe94.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.54b418ff.js",
-    "static/js/2.abc40071.chunk.js",
-    "static/css/main.d4dc012c.chunk.css",
-    "static/js/main.8d27319a.chunk.js"
+    "static/js/2.0eb4fe94.chunk.js",
+    "static/css/main.3e9fd321.chunk.css",
+    "static/js/main.7b609d07.chunk.js"
   ]
 }
