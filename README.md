@@ -1,3 +1,3 @@
 # Terminal Chat
 
-A simple terminal style chatroom made with react and firebase
+A simple terminal style chat room made with react and firebase
