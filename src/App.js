@@ -148,25 +148,3 @@ function SignIn() {
 }
 
 export default App;
-
-/*
-<div className="App crt">
-      <div className="message received">
-        <p>user1: hello</p>
-      </div>
-      <div className="message received">
-        <p>monkey69: hi</p>
-      </div>
-      <div className="message sent">
-        <p>val: heyo</p>
-      </div>
-      <div className="message received">
-        <p>helloworld: test</p>
-      </div>
-      <footer>
-        <label>val@terminal-chat &gt; </label>
-        <input className="crt"></input>
-        <button className="crt">SIGN OUT</button>
-      </footer>
-    </div>
-*/
